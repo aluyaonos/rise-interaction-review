@@ -1,0 +1,424 @@
+@font-face {
+  font-family: "Tomato Grotesk";
+  src:
+    url("../assets/fonts/TomatoGrotesk-Medium.otf") format("opentype"),
+    local("Tomato Grotesk Medium"),
+    local("TomatoGrotesk-Medium");
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Tomato Grotesk";
+  src:
+    url("../assets/fonts/TomatoGrotesk-SemiBold.otf") format("opentype"),
+    local("Tomato Grotesk SemiBold"),
+    local("TomatoGrotesk-SemiBold");
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+}
+
+:root {
+  color: #000;
+  background: #fff;
+  font-family: "Work Sans", sans-serif;
+  font-synthesis: none;
+  --brand-500: #0898a0;
+  --brand-600: #006d79;
+  --grey-200: #eaecf0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-width: 320px;
+  margin: 0;
+  background: #fff;
+}
+
+a {
+  color: inherit;
+}
+
+.managed-investing {
+  display: grid;
+  width: 100%;
+  min-height: max(820px, 100svh);
+  place-items: center;
+  overflow: hidden;
+  background: #fff;
+}
+
+.managed-investing__stage {
+  position: relative;
+  width: min(100%, 1440px);
+  height: 820px;
+  flex: none;
+  background: #fff;
+}
+
+.managed-investing__content {
+  position: absolute;
+  top: 100px;
+  left: 120px;
+  width: 399px;
+}
+
+.managed-investing__title {
+  max-width: 399px;
+  margin: 0;
+  font-family: "Tomato Grotesk", sans-serif;
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 38px;
+  letter-spacing: -0.01em;
+}
+
+.benefit-list {
+  display: grid;
+  gap: 14px;
+  width: max-content;
+  max-width: 100%;
+  margin: 16px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.benefit-list__item {
+  display: flex;
+  min-height: 24px;
+  align-items: center;
+  gap: 6px;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: -0.03em;
+}
+
+.check-icon {
+  flex: 0 0 20px;
+  color: var(--brand-500);
+  fill: currentColor;
+}
+
+.button {
+  display: inline-flex;
+  height: 48px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 32px;
+  text-decoration: none;
+  transition: transform 180ms ease, background-color 180ms ease;
+}
+
+.button--primary {
+  min-width: 178px;
+  margin-top: 32px;
+  padding-inline: 24px;
+  background: var(--brand-600);
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 24px;
+  letter-spacing: -0.03em;
+}
+
+.button--primary:hover {
+  background: #005c66;
+  transform: translateY(-1px);
+}
+
+.button--primary:focus-visible {
+  outline: 3px solid color-mix(in srgb, var(--brand-500), transparent 55%);
+  outline-offset: 4px;
+}
+
+.trust-stat {
+  position: absolute;
+  top: 586px;
+  left: 120px;
+  width: 363px;
+}
+
+.trust-stat__eyebrow {
+  margin: 0 0 6px;
+  font-family: "Tomato Grotesk", sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 22px;
+  letter-spacing: -0.01em;
+}
+
+.trust-stat__value {
+  display: flex;
+  height: 86px;
+  align-items: flex-start;
+  margin: 0;
+}
+
+.trust-stat__number {
+  font-family: "Tomato Grotesk", sans-serif;
+  font-size: 72px;
+  font-weight: 500;
+  line-height: 86px;
+  letter-spacing: -0.02em;
+}
+
+.trust-stat__label {
+  margin: 1px 0 0 1px;
+  color: var(--brand-500);
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 24px;
+  letter-spacing: -0.03em;
+}
+
+.managed-investing__visual {
+  position: absolute;
+  top: 64px;
+  left: 780px;
+  width: 540px;
+}
+
+.visual-panel {
+  width: 100%;
+}
+
+.visual-panel--primary {
+  height: 484px;
+  border-radius: 16px;
+  background:
+    radial-gradient(circle at 24% 18%, rgba(255, 255, 255, 0.76), transparent 45%),
+    linear-gradient(135deg, #e7f8f2 0%, #e7f5fd 100%);
+}
+
+.visual-panel--secondary {
+  height: 107px;
+  margin-top: 42px;
+  border: 1px solid var(--grey-200);
+  border-radius: 7px;
+  background: #fff;
+}
+
+.growth-plans {
+  display: block;
+  width: 100%;
+  min-height: 0;
+  overflow: visible;
+  background: #fff;
+}
+
+/* The previous composition ends at y=700. Its gap to this heading is
+   232px plus the extra viewport height; remove 40% of that space. */
+@media (min-width: 1101px) {
+  .growth-plans {
+    margin-top: calc(-92.8px - max(0px, 40svh - 328px));
+  }
+}
+
+.growth-plans__stage {
+  position: relative;
+  width: min(100%, 1440px);
+  margin-inline: auto;
+  height: max(820px, 100svh);
+  flex: none;
+  overflow: hidden;
+  background: #fff;
+}
+
+.growth-plans__title {
+  position: absolute;
+  top: calc(112px + max(0px, 50svh - 410px));
+  left: 50%;
+  width: min(639.832px, calc(100% - 48px));
+  margin: 0;
+  transform: translateX(-50%);
+  color: #000;
+  font-family: "Tomato Grotesk", sans-serif;
+  font-size: 48px;
+  font-weight: 600;
+  line-height: 58px;
+  letter-spacing: -0.01em;
+  text-align: center;
+}
+
+.staggered-text__measure {
+  display: block;
+}
+
+.staggered-text__layer {
+  position: absolute;
+  inset: 0;
+  display: block;
+}
+
+.staggered-text__mask {
+  display: block;
+  overflow: visible;
+}
+
+.staggered-text__segment {
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(0.5em);
+  will-change: opacity, transform;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .staggered-text__measure {
+    visibility: hidden;
+  }
+
+  [data-staggered-text][data-animation-state="animating"] .staggered-text__segment {
+    opacity: 1;
+    transform: translateY(0);
+    transition:
+      opacity 914ms cubic-bezier(0.241, 0.969, 0.635, 0.997),
+      transform 914ms cubic-bezier(0.241, 0.969, 0.635, 0.997);
+    transition-delay: calc(var(--line-index) * 59ms);
+  }
+
+  [data-staggered-text][data-animation-state="done"] .staggered-text__segment {
+    opacity: 1;
+    transform: translateY(0);
+    transition: none;
+    will-change: auto;
+  }
+}
+
+.growth-card-stack {
+  position: absolute;
+  /* Show the same 169px of the stack, flush with the section boundary. */
+  top: calc(100% - 169px);
+  left: 50%;
+  width: min(480px, calc(100% - 48px));
+  aspect-ratio: 480 / 448;
+  transform: translateX(-50%);
+}
+
+.growth-card {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 24px;
+}
+
+.growth-card--peach {
+  top: 30.357%;
+  width: 74.583%;
+  height: 69.643%;
+  background: linear-gradient(180deg, #f0dbcd 0%, #faeee5 100%);
+}
+
+.growth-card--purple {
+  top: 14.509%;
+  width: 87.5%;
+  height: 82.366%;
+  background: linear-gradient(180deg, #d2b9f2 0%, #e4d5f8 77.783%);
+}
+
+.growth-card--blue {
+  top: 0;
+  width: 100%;
+  height: 93.75%;
+  background: linear-gradient(180deg, #c4dfe6 0%, #eaf4f6 77.783%);
+}
+
+@media (max-width: 1100px) {
+  .managed-investing__stage {
+    display: grid;
+    height: auto;
+    grid-template-columns: minmax(0, 1fr) minmax(360px, 1fr);
+    gap: 64px;
+    padding: 80px 64px;
+  }
+
+  .managed-investing__content,
+  .trust-stat,
+  .managed-investing__visual {
+    position: static;
+    width: 100%;
+  }
+
+  .managed-investing__content {
+    align-self: start;
+  }
+
+  .managed-investing__visual {
+    grid-area: 1 / 2 / 3 / 3;
+  }
+
+  .trust-stat {
+    align-self: end;
+  }
+
+  .visual-panel--primary {
+    height: min(484px, 45vw);
+  }
+}
+
+@media (max-width: 760px) {
+  .managed-investing__stage {
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+    padding: 64px 24px 72px;
+  }
+
+  .managed-investing__title {
+    font-size: clamp(28px, 8vw, 32px);
+  }
+
+  .managed-investing__visual {
+    order: 2;
+  }
+
+  .trust-stat {
+    order: 3;
+  }
+
+  .visual-panel--primary {
+    height: min(82vw, 484px);
+  }
+
+  .visual-panel--secondary {
+    height: 96px;
+    margin-top: 24px;
+  }
+
+  .trust-stat__number {
+    font-size: clamp(58px, 18.5vw, 72px);
+  }
+
+  .growth-plans__title {
+    top: 88px;
+    font-size: clamp(36px, 10.5vw, 48px);
+    line-height: 1.18;
+  }
+
+  .growth-card-stack {
+    top: calc(100% - 200px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .button {
+    transition: none;
+  }
+
+  .staggered-text__layer {
+    display: none;
+  }
+}
